@@ -75,32 +75,35 @@
             // 
             // btnSudd
             // 
+            this.btnSudd.BackColor = System.Drawing.Color.White;
             this.btnSudd.Image = ((System.Drawing.Image)(resources.GetObject("btnSudd.Image")));
             this.btnSudd.Location = new System.Drawing.Point(708, 67);
             this.btnSudd.Name = "btnSudd";
             this.btnSudd.Size = new System.Drawing.Size(70, 70);
             this.btnSudd.TabIndex = 2;
-            this.btnSudd.UseVisualStyleBackColor = true;
+            this.btnSudd.UseVisualStyleBackColor = false;
             this.btnSudd.Click += new System.EventHandler(this.btnSudd_Click);
             // 
             // btnEllips
             // 
+            this.btnEllips.BackColor = System.Drawing.Color.White;
             this.btnEllips.Image = ((System.Drawing.Image)(resources.GetObject("btnEllips.Image")));
             this.btnEllips.Location = new System.Drawing.Point(619, 158);
             this.btnEllips.Name = "btnEllips";
             this.btnEllips.Size = new System.Drawing.Size(70, 70);
             this.btnEllips.TabIndex = 2;
-            this.btnEllips.UseVisualStyleBackColor = true;
+            this.btnEllips.UseVisualStyleBackColor = false;
             this.btnEllips.Click += new System.EventHandler(this.btnEllips_Click);
             // 
             // btnRektangel
             // 
+            this.btnRektangel.BackColor = System.Drawing.Color.White;
             this.btnRektangel.Image = ((System.Drawing.Image)(resources.GetObject("btnRektangel.Image")));
             this.btnRektangel.Location = new System.Drawing.Point(708, 158);
             this.btnRektangel.Name = "btnRektangel";
             this.btnRektangel.Size = new System.Drawing.Size(70, 70);
             this.btnRektangel.TabIndex = 2;
-            this.btnRektangel.UseVisualStyleBackColor = true;
+            this.btnRektangel.UseVisualStyleBackColor = false;
             this.btnRektangel.Click += new System.EventHandler(this.btnRektangel_Click);
             // 
             // tbxStorlek
@@ -123,22 +126,24 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(692, 290);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 40);
             this.button1.TabIndex = 5;
             this.button1.Text = "Apply";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnPenna
             // 
+            this.btnPenna.BackColor = System.Drawing.Color.White;
             this.btnPenna.Image = ((System.Drawing.Image)(resources.GetObject("btnPenna.Image")));
             this.btnPenna.Location = new System.Drawing.Point(619, 67);
             this.btnPenna.Name = "btnPenna";
             this.btnPenna.Size = new System.Drawing.Size(70, 70);
             this.btnPenna.TabIndex = 2;
-            this.btnPenna.UseVisualStyleBackColor = true;
+            this.btnPenna.UseVisualStyleBackColor = false;
             this.btnPenna.Click += new System.EventHandler(this.btnPenna_Click);
             // 
             // Form1
@@ -155,8 +160,9 @@
             this.Controls.Add(this.btnPenna);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Ritprogram";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

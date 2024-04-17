@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Deployment.Application;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -87,6 +88,7 @@ namespace ritprogram
         {
 
         }
+
     }
 
     public class grej
@@ -96,12 +98,17 @@ namespace ritprogram
         private bool penactive = true;
         private bool rectangle = false;
         private bool ellipse = false;
+        private Point start;
         Pen pen;
         private int x = -1;
         private int y = -1;
 
         public void Up(MouseEventArgs e, Panel panel1)
         {
+            if(moving == true)
+            {
+                start = e.Location;
+            }
             // Om musen rörs bort från ritfältet avaktiveras moving boolen och muspekaren sätts till default igen.
             moving = false;
             x = e.X;
@@ -116,13 +123,14 @@ namespace ritprogram
             x = e.X;
             y = e.Y;
             panel1.Cursor = Cursors.Cross;
+            start = e.Location;
         }
 
         public void Draw(MouseEventArgs e)
         {
             // När musen rörs händer olika saker beroende på vad användaren valt för målarverktyg. 
             Brush brush = new SolidBrush(pen.Color);
-            Rectangle rect = new Rectangle(x, y, x, y);
+            Rectangle rect = new Rectangle(x, y, start.X-x, start.Y-y);
             if (moving && penactive)
             {
                 g.DrawLine(pen, new Point(x, y), e.Location);
@@ -202,11 +210,14 @@ namespace ritprogram
 
         public void Initialize(Panel panel1)
         {
+            // Initierar ritprogrammet, gör pennan mer smooth, sätter färgen till svar och storlek 5 samt gör pennan rund.
             g = panel1.CreateGraphics();
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             pen = new Pen(Color.Black, 5);
             pen.StartCap = pen.EndCap = System.Drawing.Drawing2D.LineCap.Round;
         }
+
+        
     }
 
 }
